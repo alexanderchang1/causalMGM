@@ -6,6 +6,12 @@ R >= 3.2.0,
 Java >= 1.7.0,
 [rJava](https://CRAN.R-project.org/package=rJava)
 
+For non-Mac OS
+R >= 3.6.0, (Due to rJava dependency)
+Java >= 1.7.0,
+[rJava](https://CRAN.R-project.org/package=rJava)
+
+
 ## Installation for Mac OS X Users
 Note: If legacy Java 1.6 version is installed in the computer alongside higher versions, RStudio call of rJava will default to Java 1.6. In this case causalMGM will fail to run. Please remove Java 1.6 (or place it in another directory) before installing causalMGM.
 
