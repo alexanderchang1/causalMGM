@@ -22,43 +22,43 @@ $ sudo R CMD javareconf
 ```
 - Manually load libjvm.dylib in R (e.g., in RStudio)
 ```R
-> dyn.load('/path/to/libjvm.dylib')
+dyn.load('/path/to/libjvm.dylib')
 e.g.:
-> dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib')
+dyn.load('/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib')
 ```
 - Install the R library requirements:
 ```R
-> install.packages("rJava")
+install.packages("rJava")
 ```
 - Install causalMGM from github:
 ```R
-> library(devtools)
-> install_github("benoslab/causalMGM")
-> library(causalMGM)
+library(devtools)
+install_github("benoslab/causalMGM")
+library(causalMGM)
 ```
 
 ## Installation for non-Mac OS Users
 - Install the R library requirements:
 ```R
-> install.packages("rJava")
+install.packages("rJava")
 ```
 - Install causalMGM:
 ```R
-> library(devtools)
-> install.packages("causalMGM")
-> library(causalMGM)
+library(devtools)
+install.packages("causalMGM")
+library(causalMGM)
 ```
 
 ## Example
 ```R
-> mgm_init() # Initialize MGM
+mgm_init() # Initialize MGM
 # FOR EXAMPLE DATASET 
-> dataset <- loadSampleData() # loads sample dataset, use loadData() to load own dataset
-> undgraph <- mgm(dataset) # learn the undirected graph over 'dataset'
+dataset <- loadSampleData() # loads sample dataset, use loadData() to load own dataset
+undgraph <- mgm(dataset) # learn the undirected graph over 'dataset'
 Please enter the continuous-continuous lambda value: 0.16
 Please enter the continuous-discrete lambda value: 0.2
 Please enter the discrete-discrete lambda value: 0.3
-> mgm.pc_stable(dataset, undgraph) # learn the directed graph using 'undgraph' as skeleton to guide local searches.
+mgm.pc_stable(dataset, undgraph) # learn the directed graph using 'undgraph' as skeleton to guide local searches.
 ```
 
 ## References
